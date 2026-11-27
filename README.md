@@ -1,2 +1,1 @@
-#Car Sticker Reservation
-Repository Test
+#Car Sticker Reservation for University of The East
