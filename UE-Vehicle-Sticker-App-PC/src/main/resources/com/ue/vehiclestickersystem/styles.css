@@ -1,0 +1,517 @@
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-background-color: #f4f6f9;
+}
+
+#loginRootPane {
+    -fx-background-image: url('assets/login_bg.png');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 1 0 0;
+}
+
+.sidebar-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #b71c1c;
+}
+
+.sidebar-subtitle {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #334155;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 11 16;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #b71c1c;
+}
+
+.nav-button-active {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 11 16;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(183,28,28,0.25), 8, 0, 0, 2);
+}
+
+/* Header & Cards */
+.header-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-padding: 20 24;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 14;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 8, 0, 0, 2);
+}
+
+.stock-badge {
+    -fx-background-color: #fff1f2;
+    -fx-border-color: #fecdd3;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10 16;
+}
+
+.stock-title {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9f1239;
+}
+
+.stock-count {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #b71c1c;
+}
+
+/* Dashed '+ Add Vehicle' Card */
+.add-vehicle-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1.5;
+    -fx-border-style: dashed;
+    -fx-border-radius: 14;
+    -fx-cursor: hand;
+}
+
+.add-vehicle-card:hover {
+    -fx-background-color: #fffafa;
+    -fx-border-color: #b71c1c;
+}
+
+.plus-circle {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 50;
+    -fx-min-width: 46;
+    -fx-min-height: 46;
+    -fx-max-width: 46;
+    -fx-max-height: 46;
+}
+
+/* Registered Vehicle Card */
+.vehicle-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 14;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 8, 0, 0, 2);
+}
+
+.vehicle-card:hover {
+    -fx-border-color: #b71c1c;
+}
+
+/* Inbox Message List Items */
+.inbox-item {
+    -fx-background-color: #ffffff;
+    -fx-padding: 16 18;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 0 0 1 0;
+    -fx-cursor: hand;
+}
+
+.inbox-item:hover {
+    -fx-background-color: #f8fafc;
+}
+
+.inbox-item-active {
+    -fx-background-color: #f1f5f9;
+    -fx-padding: 16 18;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1 0;
+    -fx-cursor: hand;
+}
+
+/* Pickup Checklist & FAQ Accordion */
+.checklist-pill {
+    -fx-background-color: #ecfdf5;
+    -fx-border-color: #a7f3d0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 11 14;
+}
+
+.faq-item {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 14 16;
+    -fx-cursor: hand;
+}
+
+.faq-item:hover {
+    -fx-border-color: #cbd5e1;
+}
+
+/* Buttons */
+.btn-primary {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #991b1b;
+}
+
+.btn-dark {
+    -fx-background-color: #0f172a;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+}
+
+.btn-dark:hover {
+    -fx-background-color: #1e293b;
+}
+
+.btn-secondary {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #334155;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #cbd5e1;
+}
+
+/* Modal Toggle Pills */
+.toggle-pill {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #334155;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1.2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10 14;
+    -fx-cursor: hand;
+}
+
+.toggle-pill:hover {
+    -fx-background-color: #f8fafc;
+}
+
+.toggle-pill-active {
+    -fx-background-color: #fff1f2;
+    -fx-text-fill: #b71c1c;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-border-color: #b71c1c;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10 14;
+    -fx-cursor: hand;
+}
+
+/* Modal Document Upload Boxes */
+.upload-box {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 10;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1.3;
+    -fx-border-style: dashed;
+    -fx-border-radius: 10;
+    -fx-padding: 12 16;
+    -fx-cursor: hand;
+}
+
+.upload-box:hover {
+    -fx-border-color: #b71c1c;
+    -fx-background-color: #fffafa;
+}
+
+.upload-box-done {
+    -fx-background-color: #ecfdf5;
+    -fx-background-radius: 10;
+    -fx-border-color: #10b981;
+    -fx-border-width: 1.3;
+    -fx-border-style: solid;
+    -fx-border-radius: 10;
+    -fx-padding: 12 16;
+    -fx-cursor: hand;
+}
+
+/* Form Inputs */
+.input-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 9 12;
+}
+
+.input-field:focused {
+    -fx-border-color: #b71c1c;
+}
+
+/* Admin Metric Cards & Table */
+.metric-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 6, 0, 0, 2);
+}
+
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f8fafc;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #475569;
+}
+
+/* Inbox Received / Sent Filter Tabs & Circle Compose Button */
+.inbox-tab-btn {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #475569;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 7 14;
+    -fx-cursor: hand;
+}
+
+.inbox-tab-btn:hover {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #0f172a;
+}
+
+.inbox-tab-btn-active {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 7 14;
+    -fx-cursor: hand;
+}
+
+.circle-compose-btn {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50;
+    -fx-min-width: 34;
+    -fx-min-height: 34;
+    -fx-max-width: 34;
+    -fx-max-height: 34;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(183,28,28,0.28), 6, 0, 0, 2);
+}
+
+.circle-compose-btn:hover {
+    -fx-background-color: #991b1b;
+}
+
+.user-workspace-bg {
+    -fx-background-image: url('assets/dashboard_bg2.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-opacity: 0.25;
+}
+
+/* Ensure ScrollPane and its internal viewport stay completely transparent */
+.transparent-scroll,
+.transparent-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.section-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.90);
+    -fx-background-radius: 10;
+    -fx-padding: 10 16;
+    -fx-border-color: rgba(226, 232, 240, 0.85);
+    -fx-border-radius: 10;
+}
+
+/* =========================================================================
+   ADMIN PORTAL 3-TAB STYLES
+   ========================================================================= */
+.admin-nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #334155;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 11 16;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.admin-nav-btn:hover {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #0f172a;
+}
+
+.admin-nav-active {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 11 16;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(183, 28, 28, 0.25), 8, 0, 0, 2);
+}
+
+.logout-btn,
+.admin-logout-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b71c1c;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 16;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.logout-btn:hover,
+.admin-logout-btn:hover {
+    -fx-background-color: #fff1f2;
+}
+
+.sidebar-pill-badge {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #334155;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 2 8;
+    -fx-background-radius: 12;
+}
+
+.sidebar-pill-badge-red {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 2 8;
+    -fx-background-radius: 12;
+}
+
+.sidebar-pill-badge-white {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 2 8;
+    -fx-background-radius: 12;
+}
+
+/* Filter Pills for Records Tab */
+.filter-pill {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #334155;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18;
+    -fx-background-radius: 10;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+.filter-pill:hover {
+    -fx-background-color: #f8fafc;
+}
+
+.filter-pill-active {
+    -fx-background-color: #b71c1c;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18;
+    -fx-background-radius: 10;
+    -fx-border-color: #b71c1c;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+/* Search Pill Input */
+.search-pill-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 6 14;
+}
+
+.search-pill-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 12.5px;
+    -fx-text-fill: #0f172a;
+}
+
+/* Segmented Inbox Toggle */
+.segmented-bar {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 10;
+    -fx-padding: 4;
+}
+
+.seg-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #475569;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 7 14;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.seg-btn-active {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #b71c1c;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 7 14;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.06), 4, 0, 0, 1);
+    -fx-cursor: hand;
+}

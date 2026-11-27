@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="740.0" prefWidth="1200.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ue.vehiclestickersystem.PortalController">
+    <!-- Left Navigation Sidebar (3 Tabs + Logout) -->
+    <left>
+        <VBox prefWidth="235.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Crimson Brand Header -->
+                <HBox alignment="CENTER_LEFT" spacing="12.0" style="-fx-background-color: #b71c1c; -fx-padding: 20 18;">
+                    <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+                            <image>
+                                <Image url="@assets/ue_logo.png" />
+                            </image>
+                        </ImageView>
+                        <VBox spacing="2.0">
+                            <children>
+                                <Label style="-fx-text-fill: #ffffff; -fx-font-size: 15px; -fx-font-weight: bold;" text="UE Security Desk" />
+                                <Label style="-fx-text-fill: #fecdd3; -fx-font-size: 11px;" text="Admin Portal" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <!-- 3 Admin Navigation Tabs -->
+                <VBox spacing="8.0" VBox.vgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="16.0" left="14.0" right="14.0" top="18.0" />
+                    </padding>
+                    <children>
+                        <!-- Tab 1: Dashboard -->
+                        <Button fx:id="btnAdminNavDashboard" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#showAdminDashboard" prefWidth="207.0" styleClass="admin-nav-active" text="⊞   Dashboard" />
+
+                        <!-- Tab 2: Records -->
+                        <Button fx:id="btnAdminNavRecords" alignment="CENTER_LEFT" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#showAdminRecords" prefWidth="207.0" styleClass="admin-nav-btn" text="📁   Records">
+                            <graphic>
+                                <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label fx:id="lblRecordsBadge" styleClass="sidebar-pill-badge" text="0" />
+                                    </children>
+                                </HBox>
+                            </graphic>
+                        </Button>
+
+                        <!-- Tab 3: Inbox -->
+                        <Button fx:id="btnAdminNavInbox" alignment="CENTER_LEFT" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#showAdminInbox" prefWidth="207.0" styleClass="admin-nav-btn" text="✉   Inbox">
+                            <graphic>
+                                <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label fx:id="lblInboxBadge" styleClass="sidebar-pill-badge-red" text="0" />
+                                    </children>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+
+                <!-- Bottom Pinned Logout (Matches User Portal) -->
+                <VBox style="-fx-border-color: #e2e8f0; -fx-border-width: 1 0 0 0; -fx-padding: 12 14;">
+                    <children>
+                        <Button alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogout" styleClass="logout-btn" text="↪   Logout" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+
+    <!-- Center Workspace with 0% Saturation & 35% Opacity Background Layer -->
+    <center>
+        <StackPane style="-fx-background-color: #f8fafc;" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Background Image Layer (0% Saturation, 35% Opacity) -->
+                <Region mouseTransparent="true" styleClass="user-workspace-bg">
+                    <effect>
+                        <ColorAdjust saturation="-1.0" />
+                    </effect>
+                </Region>
+
+                <!-- Transparent Dynamic Workspace Container -->
+                <ScrollPane fx:id="adminScrollPane" fitToHeight="true" fitToWidth="true" styleClass="transparent-scroll">
+                    <content>
+                        <VBox fx:id="adminContentRoot" spacing="22.0" style="-fx-background-color: transparent;">
+                            <padding>
+                                <Insets bottom="28.0" left="28.0" right="28.0" top="28.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>
